@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+.film-header h3 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.film-header h5 {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.film-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.film-card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.film-item {
+  width: 150px;
+  display: inline-block;
+  cursor: pointer;
+  overflow: visible;
+  margin: 4px 0;
+}
+
+.film-item:hover .film-card {
+  transform: rotateY(180deg);
+}
+
+.film-front, .film-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.film-back {
+  transform: rotateY(180deg) translateY(-50%);
+  top: 50%;
+}
+
+.film-image {
+  height: 200px;
+  border-radius: 5px;
+}
+
+.film-title {
+  color: #fff;
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+.film-back .film-title,
+.film-back .film-release-date,
+.film-back .film-overview {
+  color: #fff;
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+.film-back .film-title {
+  font-size: 12px;
+}
+
+.film-back .film-release-date {
+  margin: 4px 0 0;
+  font-size: 11px;
+}
+
+.film-back .film-overview {
+  font-size: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
